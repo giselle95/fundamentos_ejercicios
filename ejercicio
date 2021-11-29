@@ -1,0 +1,79 @@
+# PERMITIR EL INGRESO DE UN FLOTANTEA(EL RADIO-)E IMPRIMIR EN PANTALLA LA LONGUITUD DE LA CIRCUNFERENCIA Y SUPERFICIE DEL CIRCULO CORRESPONDIENTE
+import math
+from math import pi
+
+radio = float(input("Ingresa el radio:\n"))
+
+longuitud = 2 * pi * radio
+
+print("La longuitud de la circunferencia es {:.2f}".format(longuitud))
+
+superficie = pi * radio**2
+
+print("La superficie de la circunferencia es {:.2f}".format(superficie))
+
+
+# INGRESA 3 VALORES ENTEROS Y CALCULAR EL PROMEDIO
+valor1 = int(input("Ingrese el valor 1:\n"))
+valor2 = int(input("Ingrese el valor 2:\n"))
+valor3 = int(input("Ingrese el valor 3:\n"))
+
+promedio = (valor1 + valor2 + valor3) / 3
+
+print("El promedio es {:.2f}".format(promedio))
+
+
+# REALIZA UN PROGRAMA QUE PERMITA EL INGRESO DE LAS DIAGONALES DE UN ROMBO Y MUESTRE EL VALOR DE SU SUPERFICIE
+print(''' 
+   === ROMBO===
+        /|\ 
+ L3    / | \    L1 
+      /  |d2\ 
+     / __|__ \  
+     \ d1|   /
+ L4   \  |  /   L2
+       \ | /
+        \|/  
+    '''
+      )
+
+diagonal1 = int(input("ingrese el valor de la diagonal 1: "))
+diagonal2 = int(input("ingrese el valor de la diagonal 2: "))
+
+area = (diagonal1 * diagonal2) / 2
+
+print(f"El area del rombo es: {area}")
+
+
+# REALIZAR UN PROGRAMA QUE PERMITA EL INGRESO DE UN VALOR DE TEMPERATURA Y MUESTRE LOS VALORES EQUIVALENTES EN LAS TRES ESCALAS(CELSIUS. FARENHEIT Y KELVIN) DADO
+# QUE NO SE SABE EN QUE ESCALA SE INGRESO, DEBERÁN CONTEMPLARSE LOS TRES CASOS.
+
+print('''
+  _________   ________   ___     ___   ________  ________   ________       ___      _________   ___    ___   ________       ___   
+ |___   ___| |  ______| |   \   /   | |   __   ||  ______| |   __   |     /    \   |___   ___| |   |  |   | |   __   |     /    \  
+    |  |     |  |_____  |    \_/    | |  |__|  ||  |_____  |  |__|  |    /  /\  \     |  |     |   |  |   | |  |__|  |    /  /\  \ 
+    |  |     |   _____| |           | |    ____||   _____| |     ___|   /  /__\  \    |  |     |   |  |   | |     ___|   /  /__\  \  
+    |  |     |  |_____  |   |\_/|   | |   |     |  |_____  |  |\  \    /   ____   \   |  |     |   |__|   | |  |\  \    /   ____   \  
+    |__|     |________| |___|   |___| |___|     |________| |__| \__\  /___/    \___\  |__|     |__________| |__| \__\  /___/    \___\  
+''')
+
+
+temperatura_ingresada = float(input("Ingrese los grados"))
+
+#kelvin a farenheit(a kelvin se lo toma como temperatura ingresada), celsius
+kelvin_fanheit = (temperatura_ingresada - 273.15) * 18000
+kelvin_celsius = (temperatura_ingresada - 273.15)
+print(f"La temperatura de Kelvin a Faranheit es: {kelvin_fanheit} y a Celsius: {kelvin_celsius}")
+
+#farenheit a kelvin, celsius
+faranheit_kelvin = ((temperatura_ingresada - 32) / 1800) + 273.15
+faranheit_celsius = (temperatura_ingresada - 32) + 273.15
+print(f"La temperatura de Faranheit a kelvin es: {faranheit_kelvin} y a Celsius: {faranheit_celsius}")
+
+#celsiuus a kelvis, farenheit
+celsius_kelvin = temperatura_ingresada + 273.15
+celsius_farenheit = (temperatura_ingresada * 1.8) + 32
+print(f"La temperatura de Celsius a kelvin es: {celsius_kelvin} y a Faranheit: {celsius_farenheit}")
+
+
+
